@@ -15,16 +15,17 @@
  *
  *  You should have received a copy of the GNU General Public
  *  License along with this library; if not, write to the Free
- *  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ *  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
  *
  */
 
 #ifndef CAJA_PYTHON_H
 #define CAJA_PYTHON_H
 
+#include <Python.h>
 #include <glib-object.h>
 #include <glib/gprintf.h>
-#include <Python.h>
 
 #if defined(NO_IMPORT)
 #define CAJA_PYTHON_VAR_DECL extern
@@ -33,17 +34,26 @@
 #endif
 
 typedef enum {
-    CAJA_PYTHON_DEBUG_MISC = 1 << 0,
+  CAJA_PYTHON_DEBUG_MISC = 1 << 0,
 } CajaPythonDebug;
 
 extern CajaPythonDebug caja_python_debug;
 
-#define debug(x) { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
-                       g_printf( "caja-python:" x "\n"); }
-#define debug_enter()  { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
-                             g_printf("%s: entered\n", __FUNCTION__); }
-#define debug_enter_args(x, y) { if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
-                                     g_printf("%s: entered " x "\n", __FUNCTION__, y); }
+#define debug(x)                                    \
+  {                                                 \
+    if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
+      g_printf("caja-python:" x "\n");              \
+  }
+#define debug_enter()                               \
+  {                                                 \
+    if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC) \
+      g_printf("%s: entered\n", __FUNCTION__);      \
+  }
+#define debug_enter_args(x, y)                          \
+  {                                                     \
+    if (caja_python_debug & CAJA_PYTHON_DEBUG_MISC)     \
+      g_printf("%s: entered " x "\n", __FUNCTION__, y); \
+  }
 
 CAJA_PYTHON_VAR_DECL PyTypeObject *_PyGtkWidget_Type;
 #define PyGtkWidget_Type (*_PyGtkWidget_Type)

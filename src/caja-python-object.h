@@ -16,7 +16,8 @@
  *
  *  You should have received a copy of the GNU General Public
  *  License along with this library; if not, write to the Free
- *  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ *  Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
  *
  *  Author: Dave Camp <dave@ximian.com>
  *
@@ -30,8 +31,8 @@
 
 G_BEGIN_DECLS
 
-typedef struct _CajaPythonObject       CajaPythonObject;
-typedef struct _CajaPythonObjectClass  CajaPythonObjectClass;
+typedef struct _CajaPythonObject CajaPythonObject;
+typedef struct _CajaPythonObjectClass CajaPythonObjectClass;
 
 struct _CajaPythonObject {
   GObject parent_slot;
@@ -39,11 +40,11 @@ struct _CajaPythonObject {
 };
 
 struct _CajaPythonObjectClass {
-    GObjectClass parent_slot;
-    PyObject *type;
+  GObjectClass parent_slot;
+  PyObject *type;
 };
 
-GType caja_python_object_get_type (GTypeModule *module, PyObject *type);
+GType caja_python_object_get_type(GTypeModule *module, PyObject *type);
 
 G_END_DECLS
 
