@@ -4,6 +4,7 @@ AC_INIT([python-caja],
         [python-caja],
         [https://github.com/Libre-MATE/python-caja/])
 AC_PREREQ(2.60)
+AC_COPYRIGHT([Copyright (C) 2022 Libre MATE])
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
