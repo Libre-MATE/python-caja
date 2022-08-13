@@ -1,9 +1,9 @@
-AC_PREREQ(2.60)
 AC_INIT([python-caja],
         [1.26.0],
         [https://github.com/Libre-MATE/python-caja/issues],
         [python-caja],
         [https://github.com/Libre-MATE/python-caja/])
+AC_PREREQ(2.60)
 
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
