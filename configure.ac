@@ -1,3 +1,4 @@
+AC_PREREQ(2.60)
 AC_INIT([python-caja],
         [1.26.0],
         [https://github.com/Libre-MATE/python-caja/issues],
@@ -17,8 +18,7 @@ MATE_COMPILE_WARNINGS
 CAJA_REQUIRED=1.17.1
 
 AC_PROG_CC
-AC_DISABLE_STATIC
-AC_PROG_LIBTOOL
+LT_INIT([disable-static])
 
 PKG_PROG_PKG_CONFIG
 dnl Give error and exit if we dont have pkgconfig
