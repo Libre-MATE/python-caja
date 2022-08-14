@@ -26,7 +26,8 @@ AC_COPYRIGHT([Copyright (C) 2022 Libre MATE])
 AC_SUBST(PACKAGE)
 AC_SUBST(VERSION)
 
-AM_INIT_AUTOMAKE(1.11 dist-xz no-dist-gzip silent-rules check-news)
+AM_INIT_AUTOMAKE(1.11 dist-xz no-dist-gzip check-news)
+AM_SILENT_RULES([yes])
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
